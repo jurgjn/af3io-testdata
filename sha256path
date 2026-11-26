@@ -1,0 +1,33 @@
+#!/usr/bin/env python3
+import gzip, hashlib, os, sys, zipfile
+
+try:
+    from compression import zstd  # Python 3.14+
+except ImportError:
+    import zstandard as zstd      # pip install zstandard
+
+DECOMPRESSORS = {".gz": gzip.open, ".zst": zstd.open}
+
+def sha256(f):
+    return hashlib.file_digest(f, "sha256").hexdigest()
+
+results = []
+for dirpath, _, files in os.walk(sys.argv[1] if len(sys.argv) > 1 else "."):
+    for name in files:
+        path = os.path.join(dirpath, name)
+        base, ext = os.path.splitext(path)
+        if ext == ".zip":
+            with zipfile.ZipFile(path) as z:
+                for member in z.infolist():
+                    if not member.is_dir():
+                        with z.open(member) as f:
+                            results.append((os.path.join(dirpath, member.filename), sha256(f)))
+        elif ext in DECOMPRESSORS:
+            with DECOMPRESSORS[ext](path, "rb") as f:
+                results.append((base, sha256(f)))
+        else:
+            with open(path, "rb") as f:
+                results.append((path, sha256(f)))
+
+for path, digest in sorted(results):
+    print(f"{digest}  {path}")

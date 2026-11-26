@@ -1,0 +1,20 @@
+{
+  "name": "streptavidin_biotin_smiles",
+  "sequences": [
+    {
+      "protein": {
+        "id": "A",
+        "sequence": "EAGITGTWYNQLGSTFIVTAGADGALTGTYESAVGNAESRYVLTGRYDSAPATDGSGTALGWTVAWKNNYRNAHSATTWSGQYVGGAEARINTQWLLTSGTTEANAWKSTLVGHDTFTKVKPSAAS"
+      }
+    },
+    {
+      "ligand": {
+        "id": "B",
+        "smiles": "OC(=O)CCCC[C@@H]1SC[C@@H]2NC(=O)N[C@H]12"
+      }
+    }
+  ],
+  "modelSeeds": [42],
+  "dialect": "alphafold3",
+  "version": 1
+}

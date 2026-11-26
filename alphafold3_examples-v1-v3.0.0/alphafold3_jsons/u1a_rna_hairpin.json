@@ -1,0 +1,22 @@
+{
+  "name": "u1a_rna_hairpin",
+  "sequences": [
+    {
+      "protein": {
+        "id": "A",
+        "sequence": "AVPETRPNHTIYINNLNEKIKKDELKKSLYAIFSQFGQILDILVSRSLKMRGQAFVIFKEVSSATNALRSMQGFPFYDKPMRIQYAKTDSDIIAKMKGTFV"
+      }
+    },
+    {
+      "rna": {
+        "id": "B",
+        "sequence": "AAUCCAUUGCACUCCGGAUUU"
+      }
+    }
+  ],
+  "modelSeeds": [
+    42
+  ],
+  "dialect": "alphafold3",
+  "version": 1
+}

@@ -1,0 +1,38 @@
+{
+  "name": "kras_g12c_sotorasib",
+  "sequences": [
+    {
+      "protein": {
+        "id": "A",
+        "sequence": "MTEYKLVVVGACGVGKSALTIQLIQNHFVDEYDPTIEDSYRKQVVIDGETCLLDILDTAGQEEYSAMRDQYMRTGEGFLCVFAINNTKSFEDIHHYREQIKRVKDSEDVPMVLVGNKCDLPSRTVDTKQAQDLARSYGIPFIETSAKTRQRVEDAFYTLVREIRQYRLKKISKEEKTPGCVKIKKCIIM"
+      }
+    },
+    {
+      "ligand": {
+        "id": "B",
+        "ccdCodes": [
+          "MOV"
+        ]
+      }
+    }
+  ],
+  "bondedAtomPairs": [
+    [
+      [
+        "A",
+        12,
+        "SG"
+      ],
+      [
+        "B",
+        1,
+        "C25"
+      ]
+    ]
+  ],
+  "modelSeeds": [
+    42
+  ],
+  "dialect": "alphafold3",
+  "version": 1
+}

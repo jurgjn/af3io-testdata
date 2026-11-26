@@ -1,0 +1,20 @@
+{
+  "name": "calmodulin_4calcium",
+  "sequences": [
+    {
+      "protein": {
+        "id": "A",
+        "sequence": "MADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTIDFPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREADIDGDGQVNYEEFVQMMTAK"
+      }
+    },
+    {
+      "ligand": {
+        "id": ["B", "C", "D", "E"],
+        "ccdCodes": ["CA"]
+      }
+    }
+  ],
+  "modelSeeds": [42],
+  "dialect": "alphafold3",
+  "version": 1
+}
